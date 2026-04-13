@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery — Wilde Made</title>
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="Wilde Made" />
+    <span class="nav-logo-text">WILDE MADE</span>
+  </a>
+  <div class="nav-links">
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="cart-btn" id="cart-count" onclick="openCart()">Cart</button>
+</nav>
+
+<section>
+  <div class="section-eyebrow">Gallery</div>
+  <h2 class="section-title">The Studio</h2>
+  <p class="section-sub">A visual diary of pieces, process, and mornings in the kitchen.</p>
+
+  <div class="gallery">
+    <div class="gallery-item">studio light</div>
+    <div class="gallery-item">wheel work</div>
+    <div class="gallery-item">first loaf</div>
+    <div class="gallery-item">glaze tests</div>
+    <div class="gallery-item">shelf of mugs</div>
+    <div class="gallery-item">morning proof</div>
+    <div class="gallery-item">kiln open</div>
+    <div class="gallery-item">scoring</div>
+    <div class="gallery-item">the garden</div>
+    <div class="gallery-item">hand on clay</div>
+    <div class="gallery-item">table set</div>
+    <div class="gallery-item">crumb</div>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo.png" alt="Wilde Made" />
+  <p>Wilde Made</p>
+  <div class="location">San Luis Obispo, CA</div>
+</footer>
+
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="btn" style="width:100%" onclick="alert('Checkout coming soon!')">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

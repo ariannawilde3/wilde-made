@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop — Wilde Made</title>
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="Wilde Made" />
+    <span class="nav-logo-text">WILDE MADE</span>
+  </a>
+  <div class="nav-links">
+    <a href="shop.html" class="active">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="cart-btn" id="cart-count" onclick="openCart()">Cart</button>
+</nav>
+
+<section>
+  <div class="section-eyebrow">Shop</div>
+  <h2 class="section-title">The Collection</h2>
+  <p class="section-sub">Products live below as previews. Real inventory and checkout come online as the studio opens.</p>
+
+  <div class="filters">
+    <button class="filter active" data-filter="all" onclick="filterProducts('all')">All</button>
+    <button class="filter" data-filter="ceramics" onclick="filterProducts('ceramics')">Ceramics</button>
+    <button class="filter" data-filter="sourdough" onclick="filterProducts('sourdough')">Sourdough</button>
+  </div>
+
+  <div class="products">
+    <div class="product" data-category="ceramics">
+      <div class="product-img">blush vessel</div>
+      <div class="product-body">
+        <h4>Blush Vessel</h4>
+        <div class="product-price">$48.00</div>
+        <button class="product-add" onclick="addToCart('v1','Blush Vessel',48)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product" data-category="ceramics">
+      <div class="product-img">rose mug</div>
+      <div class="product-body">
+        <h4>Rose Mug</h4>
+        <div class="product-price">$32.00</div>
+        <button class="product-add" onclick="addToCart('m1','Rose Mug',32)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product" data-category="ceramics">
+      <div class="product-img">clay bowl</div>
+      <div class="product-body">
+        <h4>Clay Bowl</h4>
+        <div class="product-price">$56.00</div>
+        <button class="product-add" onclick="addToCart('b1','Clay Bowl',56)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product" data-category="sourdough">
+      <div class="product-img">country loaf</div>
+      <div class="product-body">
+        <h4>Country Loaf</h4>
+        <div class="product-price">$12.00</div>
+        <button class="product-add" onclick="addToCart('l1','Country Loaf',12)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product" data-category="sourdough">
+      <div class="product-img">seeded batard</div>
+      <div class="product-body">
+        <h4>Seeded Bâtard</h4>
+        <div class="product-price">$14.00</div>
+        <button class="product-add" onclick="addToCart('l2','Seeded Bâtard',14)">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product" data-category="sourdough">
+      <div class="product-img">rosemary focaccia</div>
+      <div class="product-body">
+        <h4>Rosemary Focaccia</h4>
+        <div class="product-price">$10.00</div>
+        <button class="product-add" onclick="addToCart('l3','Rosemary Focaccia',10)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-state" style="margin-top:3rem">
+    <p>Placeholder products shown above.<br/>Real listings arrive as pieces come out of the kiln and the oven.</p>
+    <a href="contact.html" class="btn btn-outline">Join the Waitlist</a>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo.png" alt="Wilde Made" />
+  <p>Wilde Made</p>
+  <div class="location">San Luis Obispo, CA</div>
+</footer>
+
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="btn" style="width:100%" onclick="alert('Checkout coming soon!')">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

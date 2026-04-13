@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Wilde Made</title>
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="Wilde Made" />
+    <span class="nav-logo-text">WILDE MADE</span>
+  </a>
+  <div class="nav-links">
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="cart-btn" id="cart-count" onclick="openCart()">Cart</button>
+</nav>
+
+<section>
+  <div class="section-eyebrow">About</div>
+  <h2 class="section-title">Wilde Made</h2>
+
+  <div class="about">
+    <div class="about-img">your photo here</div>
+    <p class="lead">A small studio where clay and flour share the same shelves.</p>
+    <p>Wilde Made is a new brand rooted on California's Central Coast. It begins with ceramics — slow, quiet vessels made one at a time — and grows to sourdough: naturally leavened loaves pulled from the oven on weekend mornings.</p>
+    <p>Every piece leaves here having been touched by hand. Nothing rushed, nothing mass-produced — only things made with the kind of patience that pink dawn deserves.</p>
+    <p>More to come, as the shelves fill.</p>
+    <div style="margin-top:2rem"><a href="contact.html" class="btn">Say Hello</a></div>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo.png" alt="Wilde Made" />
+  <p>Wilde Made</p>
+  <div class="location">San Luis Obispo, CA</div>
+</footer>
+
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="btn" style="width:100%" onclick="alert('Checkout coming soon!')">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

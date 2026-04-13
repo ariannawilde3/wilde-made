@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wilde Made — Ceramics · Bread · Handmade</title>
+<meta name="description" content="Wilde Made — handcrafted ceramics and sourdough from San Luis Obispo, CA." />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="Wilde Made" />
+    <span class="nav-logo-text">WILDE MADE</span>
+  </a>
+  <div class="nav-links">
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="cart-btn" id="cart-count" onclick="openCart()">Cart</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <img src="assets/logo.png" alt="Wilde Made logo" />
+    <h1>Wilde Made</h1>
+    <div class="hero-tagline">Ceramics · Bread · Handmade</div>
+    <p class="hero-sub">Small-batch goods made slowly and with care — rooted on the Central Coast.</p>
+    <a href="shop.html" class="btn">Visit the Shop</a>
+  </div>
+</section>
+
+<section>
+  <div class="section-eyebrow">What We Make</div>
+  <h2 class="section-title">A small, growing catalog</h2>
+  <p class="section-sub">Starting with ceramics and fresh sourdough. More textures, more flavors, as the studio grows.</p>
+
+  <div class="categories">
+    <a href="shop.html" class="category-card">
+      <svg viewBox="0 0 60 60" width="60" height="60">
+        <ellipse cx="30" cy="42" rx="21" ry="12" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+        <path d="M12 30 Q12 42, 30 42 Q48 42, 48 30" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+        <ellipse cx="30" cy="30" rx="18" ry="7" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+      </svg>
+      <h3>Ceramics</h3>
+      <p>Vessels, mugs, and small sculptural pieces.</p>
+    </a>
+    <a href="shop.html" class="category-card">
+      <svg viewBox="0 0 60 60" width="60" height="60">
+        <ellipse cx="30" cy="37" rx="21" ry="15" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+        <path d="M15 30 Q30 18, 45 30" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+        <line x1="30" y1="22" x2="30" y2="33" stroke="#9E4A5A" stroke-width="1.2"/>
+      </svg>
+      <h3>Sourdough</h3>
+      <p>Naturally leavened loaves, baked weekly.</p>
+    </a>
+    <a href="shop.html" class="category-card">
+      <svg viewBox="0 0 60 60" width="60" height="60">
+        <rect x="15" y="21" width="30" height="24" rx="3" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+        <path d="M15 21 Q30 9, 45 21" fill="none" stroke="#9E4A5A" stroke-width="1.4"/>
+        <circle cx="30" cy="33" r="3" fill="#9E4A5A"/>
+      </svg>
+      <h3>&amp; More</h3>
+      <p>New makings as the brand grows.</p>
+    </a>
+  </div>
+</section>
+
+<section style="background: var(--rose-light);">
+  <div class="section-eyebrow">Our Story</div>
+  <h2 class="section-title">Made slowly, by hand</h2>
+  <p class="section-sub">Wilde Made is a small studio on the Central Coast, where clay and flour share the same shelves. Every piece leaves here touched — never rushed.</p>
+  <div style="text-align:center"><a href="about.html" class="btn btn-outline">Read More</a></div>
+</section>
+
+<footer>
+  <img src="assets/logo.png" alt="Wilde Made" />
+  <p>Wilde Made</p>
+  <div class="location">San Luis Obispo, CA</div>
+</footer>
+
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="btn" style="width:100%" onclick="alert('Checkout coming soon!')">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
